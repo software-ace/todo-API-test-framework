@@ -6,7 +6,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Install Allure command-line
-        run: |
+       run: |
           wget -O allure-2.15.0.tgz https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.15.0/allure-commandline-2.15.0.tgz
           tar -zxvf allure-2.15.0.tgz
           export PATH=$PATH:$(pwd)/allure-2.15.0/bin
