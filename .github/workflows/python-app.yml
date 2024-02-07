@@ -23,26 +23,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest==8.0.0 pytest-html==4.1.1 faker==22.6.0 requests==2.31.0
       
-      - name: Run tests and generate Allure reports
+      - name: Run tests and generate report
         run: |
-          pytest --html=./results
-
-      - name: Load test report history
-        uses: actions/checkout@v3
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Build test report
-        run: |
-          cp -r results/* gh-pages/
-
+          pytest --html=./testing_results/
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3.9.3
-        if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: gh-pages
+          publish_dir: testing_results
