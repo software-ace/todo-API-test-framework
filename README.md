@@ -5,7 +5,7 @@
 [![Requests Version](https://img.shields.io/badge/requests-2.31.0-blue)](https://docs.python-requests.org/en/latest/)
 [![Faker Version](https://img.shields.io/badge/faker-22.6.0-blue)](https://faker.readthedocs.io/en/master/)
 
-This repository contains a Python test suite for a ToDo app API [here is the api documentaion](https://todo.pixegami.io/docs).
+This repository contains a Python test suite for a ToDo app API [here is the API documentation](https://todo.pixegami.io/docs).
 The tests are written using pytest and utilize 
 the requests library for API interactions and faker for generating fake data.
 
@@ -31,7 +31,7 @@ This will run the tests and generate an HTML report in the `testing_results` dir
 ## Test Dependencies
 
    - pytest: A testing framework for Python.
-   - pytest-html: A plugin for pytest that produces a HTML report for test results.
+   - pytest-html: A plugin for pytest that produces an HTML report for test results.
    - requests: A Python library for making HTTP requests.
    - faker: A Python library for generating fake data.
 
